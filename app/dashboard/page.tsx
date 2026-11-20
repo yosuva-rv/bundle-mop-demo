@@ -1,4 +1,4 @@
-import RevenueChart from '@/components/RevenueChart';
+import RevenueChart from '@/components/LazyRevenueChart';
 import { revenue } from '@/lib/data';
 
 export default function DashboardPage() {
