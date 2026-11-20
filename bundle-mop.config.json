@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/yosuva-rv/bundle-mop/main/schema/bundle-mop.config.schema.json",
+  "budgets": [
+    { "route": "/", "firstLoad": "600 kB" },
+    { "route": "/blog/**", "firstLoad": "600 kB" },
+    { "route": "/dashboard", "firstLoad": "1 MB" },
+    { "route": "/**", "firstLoad": "650 kB" }
+  ]
+}

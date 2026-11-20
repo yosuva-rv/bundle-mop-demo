@@ -1,0 +1,21 @@
+name: Bundle Mop
+
+on: pull_request
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  bundle-mop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Compares this PR with its base, comments on the PR, and fails if a budget in
+      # bundle-mop.config.json is exceeded.
+      - uses: yosuva-rv/bundle-mop@v0
